@@ -18,9 +18,9 @@ In the directory 'benchmarks' we provide benchmarking results for these algorith
 Benchmarks are done according to the following setting:
 
 For every 
-- exact target value $a^* \in [0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99]$,
-- target accuracy $\epsilon \in \{10^{-k} | k = 1, \ldots, 6\}$, and
-- confidence level $\alpha \in \{0.9, 0.95, 0.99\}$,
+- exact target value $a^* = 0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99$,
+- target accuracy $\epsilon = 10^{-k}, k = 1, \ldots, 6$, and
+- confidence level $\alpha = 0.9, 0.95, 0.99$,
 
 the analyzed algorithms are repeated 100 times and the number of calls to the oracle $Q$ is counted and reported in terms of the mean and standard deviation over the 100 repetitions. The corresponding algorithmic parameters should be given in a JSON dictionary in the column `params`.
 The raw results are then reported in the format (cf. `results/results_template.csv`).
@@ -30,7 +30,7 @@ The raw results are then reported in the format (cf. `results/results_template.c
 |-----------|----------|----------------|-------|-------------------|--------------------|--------|-------------|
 | IAE       | 0.25     | 1e-3           | 0.05  | ...               | ...                | ...    | 100         |
 
-The available results are illustrated in `results.ipynb` (TBD).
+The available results are illustrated in `results.ipynb`.
 
 The benchmarked algorithms can be provided in terms of code (see `code/ae_variant_template.py` and/or results).
 
