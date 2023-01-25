@@ -5,7 +5,7 @@ In recent years, many variants without the requirement of quantum phase estimati
 In the following, we give an overview of these variants as well as some of their properties and links to relevant papers.
 
 
-| Algorithm | Year | Benchmarked | Comments | Code |
+| Algorithm | Year | Benchmarked | Comments | Code To Generate Results |
 |-----------|------|-------------|----------|------|
 | [Maximum Likelihood AE (MLAE)](https://link.springer.com/article/10.1007/s11128-019-2565-2) | 2020 | No |                                       | https://github.com/Qiskit/qiskit-terra/blob/main/qiskit/algorithms/amplitude_estimators/mlae.py
 | [Iterative AE (IAE)](https://www.nature.com/articles/s41534-021-00379-1)                    | 2021 | No |                                       | https://github.com/Qiskit/qiskit-terra/blob/main/qiskit/algorithms/amplitude_estimators/iae.py |
