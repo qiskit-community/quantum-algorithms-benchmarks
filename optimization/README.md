@@ -2,7 +2,16 @@
 
 Welcome to the optimization benchmarks. 
 In this repository you will find a set of classical optimization problems and a description 
-of known solutions using quantum hardware.
+of known solutions using quantum and/or classical hardware.
+This repository is organized according to the following structure:
+
+- Optimization
+    - problems
+        - maxcut
+        - ...
+    - README.md
+
+The problems are thus organized following their type.
 
 ### Contributing a new problem
 
