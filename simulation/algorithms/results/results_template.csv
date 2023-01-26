@@ -1,0 +1,3 @@
+algorithm,a_target,epsilon_target,alpha,mean_oracle_calls,stdev_oracle_calls,params
+"MLAE",0.5,1e-3,0.05,10,1,{'shots': 100}
+"MLAE",0.5,1e-4,0.05,100,10,{'shots': 100}
