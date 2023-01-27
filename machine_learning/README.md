@@ -36,16 +36,16 @@ To support comparability, we provide a set of datasets which are relevant for th
 Notably, some of the references below provide links to publicly available online resources and other link to files which generate a benchmarking dataset.
 
 * [Publicly available credit risk dataset](online:http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data)
-* [Fraud detection dataset - talk to Erik Altman]()
-* [GARCH data - file to be written]()
+* GARCH data
+* etc.
 
 ## Result summary
 
 This section summarizes some results of the benchmarks. 
 The table below has the key numbers but more importantly points to the file that runs the benchmark.
 
-| Algorithm | Problem           | Dataset                 | Metric | Result | File |
-|-----------|-------------------|-------------------------|--------|--------|------|
-| VQC       | Fraud detection   | German Credit Risk Data |        |        |      |
-| BBBO      | Feature Selection |                         |        |        |      |
+| Algorithm | Problem           | Dataset                 | Metric | Result | File |  Backend |
+|-----------|-------------------|-------------------------|--------|--------|------|----------|
+| VQC       | Fraud detection   | German Credit Risk Data |        |        |      |----------|
+| BBBO      | Feature Selection |                         |        |        |      |----------|
 
