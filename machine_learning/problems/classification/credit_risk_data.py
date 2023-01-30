@@ -36,6 +36,10 @@ vqc.fit(X_train.to_numpy(), y_train.to_numpy())
 print('Train Score', vqc.score(X_train.to_numpy(), y_train.to_numpy()))
 print('Test Score',  vqc.score(X_test.to_numpy(), y_test.to_numpy()))
 
-print('Train Accuracy',accuracy_score(y_train.to_numpy(), vqc.predict(X_train.to_numpy())))
-print('Test Accuracy',accuracy_score(y_test.to_numpy(), vqc.predict(X_test.to_numpy())))
+print('Train Accuracy', accuracy_score(y_train.to_numpy(), vqc.predict(X_train.to_numpy())))
+print('Test Accuracy', accuracy_score(y_test.to_numpy(), vqc.predict(X_test.to_numpy())))
+
+
+trained_params = VQC.weights
+np.save('trained_params.npy', trained_params)
 

@@ -7,9 +7,8 @@ This subdirectory holds the machine learning track of the benchmarks of quantum 
 To benchmark quantum solvers for quantum machine learning problems in a financial setting we consider finance oriented benchmarks and generic benchmarks.
 The financial benchmarks include
 
-* Fraud Detection
-* Trading
-* Customer Analysis
+* Classification such as fraud detection or customer analysis
+* Forecasting such as trading
 * Feature selection
 
 The benchmarks are based on the following quantum algorithms
@@ -17,7 +16,8 @@ The benchmarks are based on the following quantum algorithms
 * [Variational quantum classifier (VQC)](https://github.com/Qiskit/qiskit-machine-learning/blob/main/qiskit_machine_learning/algorithms/classifiers/vqc.py) 
 * [Quantum support vector machine classifier (QSVC)](https://github.com/Qiskit/qiskit-machine-learning/blob/main/qiskit_machine_learning/algorithms/classifiers/qsvc.py)
 * [Neural network classifier](https://github.com/Qiskit/qiskit-machine-learning/blob/main/qiskit_machine_learning/algorithms/classifiers/neural_network_classifier.py)
-* Black-box binary optimizations (BBBO)
+* [Black-box binary optimizations (BBBO)](https://quantum-journal.org/papers/q-2023-01-26-909/)
+* etc.
 
 ## Metrics  
 
