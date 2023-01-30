@@ -1,0 +1,20 @@
+{
+  "quality": {
+    "value": "A float describing the quality of the solution.",
+    "unit": "A string of the unit in which the quality is measured.",
+    "description": "A description of how quality is measured.",
+    "metadata": "A free form dictionary to include additional metrics and information."
+  },
+  "time-to-solution": {
+    "value": "A float which gives the time it took to find the solution.",
+    "unit": "A string of the unit in which the time-to-solution is given. This should ideally be 's' to indicate seconds.",
+    "description": "A description of how time-to-solution is measured.",
+    "metadata": "A free form dictionary to include additional metrics and information."
+  },
+  "cost-of-solution": {
+    "value": "A float which gives the cost of the solution.",
+    "unit": "A string of the unit in which the cost-of-solution is given.",
+    "description": "A description of how cost-of-solution is measured.",
+    "metadata": "A free form dictionary to include additional metrics and information."
+  }
+}

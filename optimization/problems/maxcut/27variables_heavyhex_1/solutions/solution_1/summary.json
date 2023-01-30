@@ -1,0 +1,11 @@
+{
+  "quality": {
+    "value": 1.0,
+    "description": "The quality is measured by the approximation ratio."
+  },
+  "time-to-solution": {
+    "value": 7192.0,
+    "unit": "s",
+    "description": "Time-to-solution is reported as the Qiskit Runtime usage and includes the full variational optimization. Qiskit Runtime usage is the time a job spends leveraging the Qiskit Runtime architecture. It includes quantum compute and near-time classical pre- and post-processing. Queue time is not included."
+  }
+}
