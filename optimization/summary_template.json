@@ -1,4 +1,9 @@
 {
+  "date": "The date on which the solution was obtained/made public in format 'YYYY-MM-DD'.",
+  "publication": {
+    "title": "A title of any publication that may be associated to the solution.",
+    "doi": "The DOI linking to the publication."
+  },
   "quality": {
     "value": "A float describing the quality of the solution.",
     "unit": "A string of the unit in which the quality is measured.",
