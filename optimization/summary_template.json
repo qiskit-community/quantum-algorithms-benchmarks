@@ -1,8 +1,10 @@
 {
-  "date": "The date on which the solution was obtained/made public in format 'YYYY-MM-DD'.",
+  "date": {
+    "value": "The date on which the solution was obtained/made public in format 'YYYY-MM-DD'."
+  },
   "publication": {
+    "value": "The DOI linking to the publication. This will be shown in the summary table.",
     "title": "A title of any publication that may be associated to the solution.",
-    "doi": "The DOI linking to the publication.",
     "optional": true
   },
   "number of qubits": "The number of qubits used.",
@@ -20,7 +22,7 @@
     "metadata": "A free form dictionary to include additional metrics and information.",
     "optional": true
   },
-  "time-to-solution": {
+  "time to solution": {
     "value": "A float which gives the time it took to find the solution.",
     "unit": "A string of the unit in which the time-to-solution is given. This should ideally be 's' to indicate seconds.",
     "description": "A description of how time-to-solution is measured.",
