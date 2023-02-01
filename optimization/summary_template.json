@@ -7,7 +7,9 @@
     "title": "A title of any publication that may be associated to the solution.",
     "optional": true
   },
-  "number of qubits": "The number of qubits used.",
+  "number of qubits": {
+    "value": "The number of qubits used as an int."
+  },
   "objective": {
     "value": "A float describing the value of the objective function that the solution achieved.",
     "unit": "A string of the unit in which the quality is measured.",

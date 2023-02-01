@@ -6,7 +6,9 @@
     "value": "https://doi.org/10.22331/q-2022-12-07-870",
     "title": "Scaling of the quantum approximate optimization algorithm on superconducting qubit based hardware"
   },
-  "number of qubits": 27,
+  "number of qubits": {
+    "value": 27
+  },
   "objective": {
     "value": 12,
     "unit": "",
