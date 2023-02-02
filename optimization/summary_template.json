@@ -1,37 +1,39 @@
 {
   "date": {
-    "value": "The date on which the solution was obtained/made public in format 'YYYY-MM-DD'."
+    "value": "(str) The date on which the solution was obtained/made public in format 'YYYY-MM-DD'."
   },
   "publication": {
-    "value": "The DOI linking to the publication. This will be shown in the summary table.",
-    "title": "A title of any publication that may be associated to the solution.",
+    "value": "(str) The DOI linking to the publication. This will be shown in the summary table.",
+    "title": "(str) A title of any publication that may be associated to the solution.",
     "optional": true
   },
-  "number of qubits": {
-    "value": "The number of qubits used as an int."
+  "hardware": {
+    "maximum number of qubits": "(int) The maximum number of qubits used in a single quantum circuit.",
+    "simulator": "(bool) Weather hardware or a simulator.",
+    "name": "Name of the hardware that run the computation."
   },
   "objective": {
-    "value": "A float describing the value of the objective function that the solution achieved.",
-    "unit": "A string of the unit in which the quality is measured.",
-    "description": "A description of how quality is measured.",
+    "value": "(float or int) The value of the objective function that the solution achieved.",
+    "unit": "(str) The unit in which the quality is measured.",
+    "description": "(str) A description of how quality is measured.",
     "metadata": "A free form dictionary to include additional metrics and information.",
     "optional": false
   },
   "approximation ratio": {
-    "value": "A float describing the value of the objective function that the solution achieved.",
-    "unit": "A string of the unit in which the quality is measured.",
-    "description": "A description of how quality is measured.",
+    "value": "(float) The value of the objective function that the solution achieved.",
+    "unit": "(str) The unit in which the quality is measured.",
+    "description": "(str) A description of how quality is measured.",
     "metadata": "A free form dictionary to include additional metrics and information.",
     "optional": true
   },
   "time to solution": {
-    "value": "A float which gives the time it took to find the solution.",
-    "unit": "A string of the unit in which the time-to-solution is given. This should ideally be 's' to indicate seconds.",
-    "description": "A description of how time-to-solution is measured.",
+    "value": "(float) The time it took to find the solution.",
+    "unit": "(str) The unit in which the time-to-solution is given. This should ideally be 's' to indicate seconds.",
+    "description": "(str) A description of how time to solution is measured.",
     "metadata": "A free form dictionary to include additional metrics and information.",
     "optional": true
   },
-  "cost-of-solution": {
+  "cost of solution": {
     "value": "A float which gives the cost of the solution.",
     "unit": "A string of the unit in which the cost-of-solution is given.",
     "description": "A description of how cost-of-solution is measured.",

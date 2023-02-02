@@ -25,14 +25,15 @@ This repository allows solutions to report at least one of the following metrics
   if the optimal solution to the problem is known.
   
 * **Time to solution** includes the time it took to execute the quantum algorithm. Any contributed
-  benchmark that reports the time to solution should make clear what this includes. For instance,
+  solution that reports the time to solution should make clear what this includes. For instance,
   a benchmark with a solution obtained with a variational algorithm should specify if the time
   to solution includes the training of the variational parameters or not. Some care must be taken
   in reporting the time to solution since a family of problems may be solved by training the 
   variational algorithm once and reusing the optimal parameters.
   
 * **Cost of solution** reports the ressources needed to obtain the solution. This may
-  include, for instance, the price paid, or the amount of energy consumed to obtain the solution.
+  include, for instance, the price paid, the amount of energy consumed, or the type and number
+  of CPUs and QPUs used to obtain the solution.
   Benchmarks that report a cost of solution must clearly define what this cost includes and how
   it is measured.
 
