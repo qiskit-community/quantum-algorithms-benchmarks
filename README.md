@@ -4,7 +4,7 @@ Welcome to the quantum finance benchmarks.
 This repository is made of three sub-modules each reflecting an area where quantum comuting has the potential to improve a computational task:
 - [Machine Learning](https://link_here),
 - [Optimization](https://github.com/qiskit-community/finance_benchmarks/blob/main/optimization/README.md), and 
-- [Simulation](https://github.com/qiskit-community/finance_benchmarks/blob/main/simulation/README.md).
+- [Simulation](https://github.com/qiskit-community/finance_benchmarks/blob/main/simulation/algorithms/).
 
 ## Vision
 
