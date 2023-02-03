@@ -1,3 +1,2 @@
-algorithm,a_target,epsilon_target,alpha,mean_oracle_calls,stdev_oracle_calls,params
-"MLAE",0.5,1e-3,0.05,10,1,{'shots': 100}
-"MLAE",0.5,1e-4,0.05,100,10,{'shots': 100}
+algorithm,config,a_target,alpha,a_estimate,exact_error,ci_width,num_oracle_calls
+IAE,{'epsilon_target': 1e-1, 'alpha': 0.05, 'shots': 100},0.25,0.05,0.275,0.025,0.05,200
