@@ -51,7 +51,7 @@ If you benchmarked some of the above algorithms or would like to contribute benc
 
 Create a pull request containing:
 1. an updated version of the present page (updating the table of algorithms above)
-2. a new folder with a README file describing what is being benchmarked and where the code to reproduce the results can be found, as well as
+2. a new folder with a README file describing what is being benchmarked and where the code to reproduce the results can be found,
 3. a results file following the given format with the benchmarking results, and
 4. an updated version of the results summary notebook.
 
