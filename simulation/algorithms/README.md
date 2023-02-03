@@ -1,44 +1,57 @@
 # Benchmarking Amlitude Estimation Algorithms
 
 Amplitude Estimation (AE) has been first introduced by Brassard et al. (refered to here as "[Canonical AE](https://arxiv.org/abs/quant-ph/0005055)").
-In recent years, many variants without the requirement of quantum phase estimation have been proposed.
+AE is an algorithm that may allow to speed-up many applications, such as derivative pricing or risk analysis.
+In recent years, many variants of AE without quantum phase estimation have been proposed.
 In the following, we give an overview of these variants as well as some of their properties and links to relevant papers.
 
 
-| Algorithm | Year | Benchmarked | Comments | Code To Generate Results |
-|-----------|------|-------------|----------|------|
-| [Maximum Likelihood AE (MLAE)](https://link.springer.com/article/10.1007/s11128-019-2565-2) | 2020 | TBD |                                       | https://github.com/Qiskit/qiskit-terra/blob/main/qiskit/algorithms/amplitude_estimators/mlae.py
-| [Iterative AE (IAE)](https://www.nature.com/articles/s41534-021-00379-1)                    | 2021 | TBD |                                       | https://github.com/Qiskit/qiskit-terra/blob/main/qiskit/algorithms/amplitude_estimators/iae.py |
-| [Low Depth AE](https://quantum-journal.org/papers/q-2022-06-27-745/)                        | 2022 | TBD |                                       | |
-| [Modified Iterative AE](https://arxiv.org/abs/2208.14612)                                   | 2022 | TBD | Asymptotically optimal variant of IAE | |
-| [Random Depth AE](https://arxiv.org/abs/2301.00528)                                         | 2023 | TBD |                                       | |
+| Algorithm | Year | Benchmarked | Comments |
+|-----------|------|-------------|----------|
+| [Maximum Likelihood AE (MLAE)](https://link.springer.com/article/10.1007/s11128-019-2565-2) | 2020 | TBD |                                       |
+| [Iterative AE (IAE)](https://www.nature.com/articles/s41534-021-00379-1)                    | 2021 | TBD |                                       |
+| [Low Depth AE](https://quantum-journal.org/papers/q-2022-06-27-745/)                        | 2022 | TBD |                                       |
+| [Modified Iterative AE](https://arxiv.org/abs/2208.14612)                                   | 2022 | TBD | Asymptotically optimal variant of IAE |
+| [Random Depth AE](https://arxiv.org/abs/2301.00528)                                         | 2023 | TBD |                                       |
 
-In the directory 'benchmarks' we provide benchmarking results for these algorithms for different target accuracies as well as problem settings.
+In the directory 'results' we provide benchmarking results for these algorithms for different scenarios.
+For every algorithm, benchmarks are done according to the following setting:
 
-Benchmarks are done according to the following setting:
+For every
+- exact value $a^* = 0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99$,
+- estimated/target accuracy (depending on the algorithm) $\epsilon = 10^{-k}, k = 1, \ldots, 6$, and
+- confidence level $1-\alpha = 0.95$,
 
-For every 
-- exact target value $a^* = 0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99$,
-- target accuracy $\epsilon = 10^{-k}, k = 1, \ldots, 6$, and
-- confidence level $\alpha = 0.9, 0.95, 0.99$,
-
-the analyzed algorithms are repeated 100 times and the number of calls to the oracle $Q$ is counted and reported in terms of the mean and standard deviation over the 100 repetitions. The corresponding algorithmic parameters should be given in a JSON dictionary in the column `params`.
-The raw results are then reported in the format (cf. `results/results_template.csv`).
+the considered algorithms are repeated 100 times and the number of calls to the oracle $Q$ is counted for each repetition.
+Further, the actually achieve accuracy as well as the half-width of the a posteriori confidence intervals (for confidence level $1-\alpha$) are reported.
+The corresponding algorithmic parameters to achieve the results should be given in a JSON dictionary in the column `config`.
+The raw results are reported in the format (cf. `results/results_template.csv`):
 
 
-| algorithm | a_target | epsilon_target | alpha | mean_oracle_calls | stdev_oracle_calls | params | repetitions |
-|-----------|----------|----------------|-------|-------------------|--------------------|--------|-------------|
-| IAE       | 0.25     | 1e-3           | 0.05  | ...               | ...                | ...    | 100         |
+| algorithm | config | a_target | alpha | a_estimate | exact_error | ci_width    | num_oracle_calls |
+|-----------|--------|----------|-------|------------|-------------|-------------|------------------|
+| IAE       | {...}  | 0.25     | 0.05  | 0.28       | 0.03        | 0.12        | 100              |
 
-The available results are illustrated in `results.ipynb`.
+The colums are defined as follows:
+- `algorithm`: The name or abbreviation of the considered algorithm.
+- `config`: A dictionary summarizing the algorithm settings for reproducability.
+- `a_target`: The true `a^*` value of the considered problem.
+- `alpha`: $(1-\alpha)$ determines the confidence level of the a posterori confidence intervals.
+- `a_estimate`: The estimated `a` value returned by the algorithm.
+- `exact_error`: The exact error between `a` and `a^*`.
+- `ci_width`: The half-width of the a posteriori confidence interval, i.e., the estimate error.
+- `num_oracle_calls`: The used number of oracle calls to achieve the reported results.
 
-The benchmarked algorithms can be provided in terms of code (see `code/ae_variant_template.py` and/or results).
+An overview of all available results is illustrated in `results.ipynb`.
+
 
 ## How to contribute benchmarks
 
-If you benchmarked some of the above algorithms or would like to contribute a new algorithm you can follow the steps below:
+If you benchmarked some of the above algorithms or would like to contribute benchmarks for a new algorithm you can follow the steps below:
 
 Create a pull request containing:
 1. an updated version of the present page (updating the table of algorithms above)
-2. a results file following the given format with the benchmarking results
-3. an updating version of the results notebook
+2. a new folder with a README file describing what is being benchmarked and where the code to reproduce the results can be found, as well as
+3. a results file following the given format with the benchmarking results, and
+4. an updated version of the results summary notebook.
+
