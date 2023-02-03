@@ -25,7 +25,7 @@ For every
 the considered algorithms are repeated 100 times and the number of calls to the oracle $Q$ is counted for each repetition.
 Further, the actually achieve accuracy as well as the half-width of the a posteriori confidence intervals (for confidence level $1-\alpha$) are reported.
 The corresponding algorithmic parameters to achieve the results should be given in a JSON dictionary in the column `config`.
-The raw results are reported in the format (cf. `results/results_template.csv`):
+The raw results are reported in the format (cf. [results/results_template.csv](results/results_template.csv)):
 
 
 | algorithm | config | a_target | alpha | a_estimate | exact_error | ci_width    | num_oracle_calls |
