@@ -42,7 +42,7 @@ The colums are defined as follows:
 - `ci_width`: The half-width of the a posteriori confidence interval, i.e., the estimate error.
 - `num_oracle_calls`: The used number of oracle calls to achieve the reported results.
 
-An overview of all available results is illustrated in `results.ipynb`.
+An overview of all available results is illustrated in the `[results summary](/results_summary.ipynb)`.
 
 
 ## How to contribute benchmarks
