@@ -38,7 +38,7 @@ The colums are defined as follows:
 - `a_target`: The true `a^*` value of the considered problem.
 - `alpha`: $(1-\alpha)$ determines the confidence level of the a posterori confidence intervals.
 - `a_estimate`: The estimated `a` value returned by the algorithm.
-- `exact_error`: The exact error between `a` and `a^*`.
+- `exact_error`: The exact error between `a_target` and `a_estimate`.
 - `ci_width`: The half-width of the a posteriori confidence interval, i.e., the estimate error.
 - `num_oracle_calls`: The used number of oracle calls to achieve the reported results.
 
