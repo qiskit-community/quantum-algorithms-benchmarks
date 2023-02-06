@@ -1,4 +1,4 @@
-# Benchmarking Amlitude Estimation Algorithms
+# Benchmarking Amplitude Estimation Algorithms
 
 Amplitude Estimation (AE) has been first introduced by Brassard et al. (refered to here as "[Canonical AE](https://arxiv.org/abs/quant-ph/0005055)").
 AE is an algorithm that may allow to speed-up many applications, such as derivative pricing or risk analysis.
