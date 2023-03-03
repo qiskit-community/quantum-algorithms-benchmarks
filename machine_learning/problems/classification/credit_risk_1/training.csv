@@ -1,0 +1,2 @@
+Iteration,Loss, Loss Gradient,Parameter Values
+100,,-,see trained_params.npy

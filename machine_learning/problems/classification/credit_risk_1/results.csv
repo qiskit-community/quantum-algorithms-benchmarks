@@ -1,6 +1,6 @@
 Metric,Data,Value
-Accuracy,Training,
-Accuracy,Test,
+Accuracy,Training, 0.6871428571428572
+Accuracy,Test, 0.7166666666666667
 Recall,Training,
 Recall,Test,
 Precision,Training,

@@ -13,8 +13,8 @@
     "name": "(str) Name of the backend that run the computation."
   },
     "model": {
-    "data": "(int) The maximum number of qubits used in a single quantum circuit.",
-    "algorithm": "(str) Specification of the algorithm used for classification.",
+    "data": "(str) Specify data, e.g., with links to the training and test data files.",
+    "algorithm": "(str) Specification of the used algorithm.",
     "ansatz": "(str) Description of the ansatz or directory to file where the ansatz is saved.",
     "optimizer": "(str) Description of the optimizer used to train the algorithm.",
     "metadata": "A free form dictionary to include additional metrics and information."

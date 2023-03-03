@@ -40,7 +40,7 @@ Notably, some of the references below provide links to publicly available online
 ## Benchmark and result summaries
 
 Every benchmark and the respective results are to be summarized in a standardized format including model, backend, training results, etc.
-Each sub-folder of [problems](problems) includes templates to summarize the models in *.json* and training parameters as well as final results in *.csv* format.
+Yemplates to summarize the models in *.json* and training parameters as well as final results in *.csv* format can be found in [problems](problems).
 
 
 ## Ways to contribute
