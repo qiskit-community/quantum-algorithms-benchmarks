@@ -11,8 +11,8 @@ import _pickle as cPickle
 import bz2
 
 #Load Data
-train_data = cPickle.load(bz2.BZ2File('train.pbz2', 'rb'))
-test_data = cPickle.load(bz2.BZ2File('test.pbz2', 'rb'))
+train_data = cPickle.load(bz2.BZ2File('../../../datasets/credit_risk_data/train.pbz2', 'rb'))
+test_data = cPickle.load(bz2.BZ2File('../../../datasets/credit_risk_data/test.pbz2', 'rb'))
 X_train, y_train = train_data.iloc[:, 0:len(train_data.columns)-1], train_data.iloc[:, len(train_data.columns)-1]
 X_test, y_test = test_data.iloc[:, 0:len(test_data.columns)-1], test_data.iloc[:, len(test_data.columns)-1]
 # Constract Ansatz
@@ -24,9 +24,9 @@ ansatz = RealAmplitudes(num_qubits=num_features, reps=5, entanglement='linear')
 
 optimizer = COBYLA(maxiter=0) #100
 
-params = np.load('credit_risk_1/trained_params.npy')
+params = np.load('trained_params.npy')
 
-print(params)
+print(params.tolist())
 
 vqc = VQC(
     quantum_instance=AerSimulator(method='matrix_product_state'),

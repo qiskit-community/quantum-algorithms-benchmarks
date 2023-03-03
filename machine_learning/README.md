@@ -39,9 +39,10 @@ Notably, some of the references below provide links to publicly available online
 
 ## Benchmark and result summaries
 
-Every benchmark and the respective results are to be summarized in a standardized format including model, backend, training results, etc.
-Yemplates to summarize the models in *.json* and training parameters as well as final results in *.csv* format can be found in [problems](problems).
+Novel benchmarks and respective results are to be summarized in a standardized format including model, backend, training results, etc.
+Templates to summarize the models in *.json* and training parameters as well as final results in *.csv* format can be found in [problems](problems).
 
+The presentation of an existing publication as a benchmark may be done in the form of a notebook as shown [in the following example](problems/feature_selection/credit_risk1/results.ipynb). 
 
 ## Ways to contribute
 * Contribute a new dataset

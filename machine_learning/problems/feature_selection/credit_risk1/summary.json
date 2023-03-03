@@ -12,8 +12,8 @@
     "name": " ibmq montreal and Qiskit's matrix product simulator"
   },
     "model": {
-    "data": "Training data to be found in train.pbz2 and test data to be found in test.pbz2",
-    "algorithm": "VarQFS - see paper",
+    "data": "datasets/credit_risk_data/train_2.pbz2 and datasets/credit_risk_data/test_2.pbz2",
+    "algorithm": "BBBO - see paper",
     "ansatz": "Qiskit-RealAmplitudes with linear entanglement - see paper for different depths",
     "optimizer": "qiskit/algorithms/optimizers/QN-SPSA"
     }
