@@ -2,6 +2,8 @@ import sys
 
 import pandas as pd
 from io import StringIO
+import _pickle as cPickle
+import bz2
 
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.model_selection import train_test_split
@@ -9,7 +11,9 @@ from sklearn.model_selection import train_test_split
 
 def data_loading(seed=77):
     ###
-    # Function to load credit risk data and return a trian test split
+    # Function to load credit risk data from
+    # http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data
+    # and store a train/test data split.
     ###
     if sys.version_info[0] == 3:
         from urllib.request import urlopen
@@ -83,4 +87,8 @@ def data_loading(seed=77):
     X_Y = pd.concat([concatenated_X, y], axis=1)
     train, test = train_test_split(X_Y, test_size=0.3, stratify=X_Y['is_credit_risky'],
                                    random_state=seed)
-    return (train, test)
+    with bz2.BZ2File('train.pbz2', 'w') as f:
+        cPickle.dump(train, f)
+    with bz2.BZ2File('test.pbz2', 'w') as f:
+        cPickle.dump(test, f)
+    return

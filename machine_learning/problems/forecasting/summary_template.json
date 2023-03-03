@@ -1,0 +1,43 @@
+{
+  "date": {
+    "value": "(str) The date on which the solution was obtained/made public in format 'YYYY-MM-DD'."
+  },
+  "publication": {
+    "value": "(str or None) The DOI linking to the publication. This will be shown in the summary table.",
+    "title": "(str or None) A title of any publication that may be associated to the solution.",
+    "optional": true
+  },
+  "backend": {
+    "maximum number of qubits": "(int) The maximum number of qubits used in a single quantum circuit.",
+    "simulator": "(bool) Indacte True for simulator or False for quantum hardware.",
+    "name": "(str) Name of the backend that run the computation."
+  },
+    "model": {
+    "data": "(int) The maximum number of qubits used in a single quantum circuit.",
+    "algorithm": "(str) Specification of the algorithm used for classification.",
+    "ansatz": "(str) Description of the ansatz or directory to file where the ansatz is saved.",
+    "optimizer": "(str) Description of the optimizer used to train the algorithm.",
+    "metadata": "A free form dictionary to include additional metrics and information."
+    },
+  "time to solution": {
+    "value": "(float) The time it took to find the solution.",
+    "unit": "(str) The unit in which the time-to-solution is given. This should be 's' to indicate seconds or 'iter' to indicate the number iterations.",
+    "description": "(str) A description of how time to solution is measured.",
+    "metadata": "A free form dictionary to include additional metrics and information.",
+    "optional": true
+  },
+  "cost of solution": {
+    "value": "A float which gives the cost of the solution.",
+    "unit": "A string of the unit in which the cost-of-solution is given.",
+    "description": "A description of how cost-of-solution is measured.",
+    "metadata": "A free form dictionary to include additional metrics and information.",
+    "optional": true
+  },
+  "cost of inference": {
+    "value": "A float which gives the cost-of-inference.",
+    "unit": "A string of the unit in which the cost-of-inference is given.",
+    "description": "A description of how cost-of-inference is measured.",
+    "metadata": "A free form dictionary to include additional metrics and information.",
+    "optional": true
+  }
+}

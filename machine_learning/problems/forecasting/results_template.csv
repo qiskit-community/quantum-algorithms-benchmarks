@@ -1,0 +1,7 @@
+Metric,Data,Value
+Accuracy,Training,
+Accuracy,Test,
+Recall,Training,
+Recall,Test,
+Precision,Training,
+Precision,Test,

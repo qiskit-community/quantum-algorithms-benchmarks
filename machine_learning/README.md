@@ -1,15 +1,16 @@
 # Benchmarking quantum machine learning for finance
 
-This subdirectory holds the machine learning track of the benchmarks of quantum computing for financial services.
+This subdirectory holds the machine learning track of the benchmarks of quantum computing algorithms.
 
 ## Problem definitions
 
-To benchmark quantum solvers for quantum machine learning problems in a financial setting we consider finance oriented benchmarks and generic benchmarks.
-The financial benchmarks include
+To benchmark quantum algorithms for [machine learning problems](problems), we consider a variety of benchmarks.
+The benchmarks include
 
 * Classification such as fraud detection or customer analysis
-* Forecasting such as trading
+* Forecasting
 * Feature selection
+* etc.
 
 The benchmarks are based on the following quantum algorithms
 
@@ -23,29 +24,26 @@ The benchmarks are based on the following quantum algorithms
 
 For each of the above mentioned algorithms this repository provides the tools to benchmark these problems with respect to the following metrics.
 
-* **Performance** is measured with respect to standard ML metrics such as recall, accuracy and precision.
+* **Performance** is measured with respect to standard ML metrics such as accuracy, recall and precision.
 
-* **Resource requirements** is measured considering various aspects: the training time, the inference time of a model, and the amount of data required to train a model up to a pre-defined accuracy. to obtain a solution.
+* **Resource requirements** is measured considering various aspects: the training time, the inference time of a model, and the amount of data required to train a model up to a pre-defined accuracy.
   For the temporal metrics, it should be noted that this includes the classical pre-processing time it takes to prepares the quantum circuits as well as the execution of the quantum circuits - except for queuing time.
   
 * **Intrinsic model properties** This class of metrics includes generalization bounds and capacity measures.
 
 ## Datasets
 
-To support comparability, we provide a set of datasets which are relevant for the benchmarking problems given above.
+To support comparability, we provide a [set of datasets](datasets) which are relevant for the benchmarking problems given above.
 Notably, some of the references below provide links to publicly available online resources and other link to files which generate a benchmarking dataset.
 
-* [Publicly available credit risk dataset](online:http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data)
-* GARCH data
-* etc.
 
-## Result summary
+## Benchmark and result summaries
 
-This section summarizes some results of the benchmarks. 
-The table below has the key numbers but more importantly points to the file that runs the benchmark.
+Every benchmark and the respective results are to be summarized in a standardized format including model, backend, training results, etc.
+Each sub-folder of [problems](problems) includes templates to summarize the models in *.json* and training parameters as well as final results in *.csv* format.
 
-| Algorithm | Problem           | Dataset                 | Metric | Result | File |  Backend |
-|-----------|-------------------|-------------------------|--------|--------|------|----------|
-| VQC       | Fraud detection   | German Credit Risk Data |        |        |      |----------|
-| BBBO      | Feature Selection |                         |        |        |      |----------|
 
+## Ways to contribute
+* Contribute a new dataset
+* Contribute a new benchmarking problem
+* Contribute a new solution
