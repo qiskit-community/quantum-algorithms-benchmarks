@@ -7,6 +7,8 @@ from qiskit_aer import AerSimulator
 import numpy as np
 from sklearn.metrics import accuracy_score, recall_score, precision_score
 
+import time
+import csv
 import _pickle as cPickle
 import bz2
 
@@ -26,7 +28,21 @@ optimizer = COBYLA(maxiter=0) #100
 
 params = np.load('trained_params.npy')
 
-print(params.tolist())
+# print(params.tolist())
+
+header = ['loss', 'params']
+
+with open('training_progress.csv', 'w', encoding='UTF8') as f:
+    writer = csv.writer(f)
+    # write the header
+    writer.writerow(header)
+
+def callback(params, loss):
+    with open('training_progress.csv', 'a', encoding='UTF8') as f:
+        writer = csv.writer(f)
+        # write the data
+        writer.writerow([loss, params])
+    return
 
 vqc = VQC(
     quantum_instance=AerSimulator(method='matrix_product_state'),
@@ -34,17 +50,20 @@ vqc = VQC(
     ansatz=ansatz,
     initial_point=params,
     optimizer=optimizer,
+    callback = callback
 )
-
+t0 = time.time()
 vqc.fit(X_train.to_numpy(), y_train.to_numpy())
+print('Time to train ', time.time()-t0)
 
-print('Loss ', vqc._loss)
+print('Fit result ', vqc._fit_result)
+print('Loss ', vqc._fit_result[0])
 
-print('Train Score', vqc.score(X_train.to_numpy(), y_train.to_numpy()))
-print('Test Score',  vqc.score(X_test.to_numpy(), y_test.to_numpy()))
+# print('Train Score', vqc.score(X_train.to_numpy(), y_train.to_numpy()))
+# print('Test Score',  vqc.score(X_test.to_numpy(), y_test.to_numpy()))
 
-print('Train Accuracy', accuracy_score(y_train.to_numpy(), vqc.predict(X_train.to_numpy())))
-print('Test Accuracy', accuracy_score(y_test.to_numpy(), vqc.predict(X_test.to_numpy())))
+# print('Train Accuracy', accuracy_score(y_train.to_numpy(), vqc.predict(X_train.to_numpy())))
+# print('Test Accuracy', accuracy_score(y_test.to_numpy(), vqc.predict(X_test.to_numpy())))
 
 print('Train Recall', recall_score(y_train.to_numpy(), vqc.predict(X_train.to_numpy())))
 print('Test Recall', recall_score(y_test.to_numpy(), vqc.predict(X_test.to_numpy())))

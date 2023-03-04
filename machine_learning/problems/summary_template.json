@@ -17,6 +17,7 @@
     "algorithm": "(str) Specification of the used algorithm.",
     "ansatz": "(str) Description of the ansatz or directory to file where the ansatz is saved.",
     "optimizer": "(str) Description of the optimizer used to train the algorithm.",
+    "loss": "(str) Description of the loss function used to train the algorithm.",
     "metadata": "A free form dictionary to include additional metrics and information."
     },
   "time to solution": {
