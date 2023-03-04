@@ -1,0 +1,28 @@
+{
+  "date": {
+    "value": "2022-07-26"
+  },
+  "publication": {
+    "value": "https://doi.org/10.22331/q-2022-12-07-870",
+    "title": "Scaling of the quantum approximate optimization algorithm on superconducting qubit based hardware"
+  },
+  "hardware": {
+    "maximum number of qubits": 27,
+    "simulator": false,
+    "name": "ibmq_mumbai"
+  },
+  "objective": {
+    "value": 12,
+    "unit": "",
+    "description": "The size of the cut."
+  },
+  "approximation ratio": {
+    "value": 1.0,
+    "description": "The depth-two QAOA found the maximum cut and the approximation ratio is 1."
+  },
+  "time to solution": {
+    "value": 7192.0,
+    "unit": "s",
+    "description": "Time-to-solution is reported as the Qiskit Runtime usage and includes the full variational optimization. Qiskit Runtime usage is the time a job spends leveraging the Qiskit Runtime architecture. It includes quantum compute and near-time classical pre- and post-processing. Queue time is not included."
+  }
+}

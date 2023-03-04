@@ -1,0 +1,43 @@
+{
+  "date": {
+    "value": "(str) The date on which the solution was obtained/made public in format 'YYYY-MM-DD'."
+  },
+  "publication": {
+    "value": "(str) The DOI linking to the publication. This will be shown in the summary table.",
+    "title": "(str) A title of any publication that may be associated to the solution.",
+    "optional": true
+  },
+  "hardware": {
+    "maximum number of qubits": "(int) The maximum number of qubits used in a single quantum circuit.",
+    "simulator": "(bool) Weather hardware or a simulator.",
+    "name": "Name of the hardware that run the computation."
+  },
+  "objective": {
+    "value": "(float or int) The value of the objective function that the solution achieved.",
+    "unit": "(str) The unit in which the quality is measured.",
+    "description": "(str) A description of how quality is measured.",
+    "metadata": "A free form dictionary to include additional metrics and information.",
+    "optional": false
+  },
+  "approximation ratio": {
+    "value": "(float) The value of the objective function that the solution achieved.",
+    "unit": "(str) The unit in which the quality is measured.",
+    "description": "(str) A description of how quality is measured.",
+    "metadata": "A free form dictionary to include additional metrics and information.",
+    "optional": true
+  },
+  "time to solution": {
+    "value": "(float) The time it took to find the solution.",
+    "unit": "(str) The unit in which the time-to-solution is given. This should ideally be 's' to indicate seconds.",
+    "description": "(str) A description of how time to solution is measured.",
+    "metadata": "A free form dictionary to include additional metrics and information.",
+    "optional": true
+  },
+  "cost of solution": {
+    "value": "A float which gives the cost of the solution.",
+    "unit": "A string of the unit in which the cost-of-solution is given.",
+    "description": "A description of how cost-of-solution is measured.",
+    "metadata": "A free form dictionary to include additional metrics and information.",
+    "optional": true
+  }
+}
