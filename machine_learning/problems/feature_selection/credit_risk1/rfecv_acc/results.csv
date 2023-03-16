@@ -1,0 +1,5 @@
+Metric,Data,Value
+Log Loss,Training, 0.4389
+Log Loss,Test, 0.4900
+Log Loss CI,Training, [0.4193, 0.4651]
+Log Loss CI,Test, [0.4643, 0.5132]

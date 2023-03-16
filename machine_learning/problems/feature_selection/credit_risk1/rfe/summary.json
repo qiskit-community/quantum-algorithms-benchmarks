@@ -8,13 +8,13 @@
   },
   "backend": {
     "maximum number of qubits": 59,
-    "simulator": "False",
-    "name": " ibmq montreal and Qiskit's matrix product simulator"
+    "simulator": "True",
+    "name": "Classical algorithm"
   },
     "model": {
     "data": "datasets/credit_risk_data/train_2.pbz2 and datasets/credit_risk_data/test_2.pbz2",
-    "algorithm": "BBBO - see paper",
-    "ansatz": "Qiskit-RealAmplitudes with linear entanglement - see paper for different depths",
-    "optimizer": "qiskit/algorithms/optimizers/QN-SPSA"
+    "algorithm": "Recursive Feature Elimination - see Scikit-Learn",
+    "ansatz": "None",
+    "optimizer": "None"
     }
 }

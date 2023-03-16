@@ -1,0 +1,5 @@
+Metric,Data,Value (mean + std)
+Log Loss,Training, 0.4386 ± 0.0034
+Log Loss,Test, 0.4804 ± 0.0028
+Log Loss CI,Training, [0.4164 ± 0.0050, 0.4621 ± 0.0044]
+Log Loss CI,Test, [0.4537 ± 0.0043, 0.5033 ± 0.0059]

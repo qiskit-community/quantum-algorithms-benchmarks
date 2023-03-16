@@ -1,0 +1,20 @@
+{
+  "date": {
+    "value": "2022-05-06"
+  },
+  "publication": {
+    "value": " https://doi.org/10.22331/q-2023-01-26-909",
+    "title": "Variational quantum algorithm for unconstrained black box binary optimization: Application to feature selection",
+  },
+  "backend": {
+    "maximum number of qubits": 59,
+    "simulator": "True",
+    "name": "Classical algorithm"
+  },
+    "model": {
+    "data": "datasets/credit_risk_data/train_2.pbz2 and datasets/credit_risk_data/test_2.pbz2",
+    "algorithm": "Recursive Feature Elimination with cross validation based on neg. log. loss - see Scikit-Learn",
+    "ansatz": "None",
+    "optimizer": "None"
+    }
+}
