@@ -19,8 +19,8 @@ Everybody is welcome to propose benchmark problems that they believe are relevan
 ## How to contribute
 
 The proposed solutions to a benchmark problem may either be executed on simulators or hardware.
-The platform on which the solution was obtained must be clearly indicated.
-Refer to the READMEs of the three sub-modules for detailed instructions on how to contribute: 
+The platform on which the solution was obtained and corresponding settings must be clearly indicated.
+Refer to the READMEs of the sub-modules for detailed instructions on how to contribute: 
 [Machine Learning](https://link_here), 
 [Optimization](https://github.com/qiskit-community/quantum-algorithms-benchmarks
 /blob/main/optimization/), and
