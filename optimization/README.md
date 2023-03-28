@@ -77,7 +77,7 @@ that describe the solution to the optimization problem.
 Furthermore, the ``summary.json`` should clearly define the performance metrics that it 
 reports. 
 This file will be algorithmically parsed to report solutions at a high level in
-the [summary notebook](link_tbd).
+the [summary notebook](/optimization/solution_summary.ipynb).
 The schemas in ``summary_template.json`` must therefore be strictly adhered to.
 If you are presenting solutions to instances of a problem class make sure to include 
 these instances as LP files too or provide a link to where they can be found.
