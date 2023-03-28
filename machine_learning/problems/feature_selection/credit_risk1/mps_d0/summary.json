@@ -12,7 +12,7 @@
     "name": " Qiskit's matrix product simulator"
   },
     "model": {
-    "data": "datasets/credit_risk_data/train_2.pbz2 and datasets/credit_risk_data/test_2.pbz2",
+    "data": "datasets/credit_risk_data/load_credit_risk_data",
     "algorithm": "BBBO - see paper",
     "ansatz": "Qiskit-RealAmplitudes with linear entanglement depth 0",
     "optimizer": "qiskit/algorithms/optimizers/QN-SPSA"

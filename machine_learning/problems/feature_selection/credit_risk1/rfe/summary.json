@@ -12,7 +12,7 @@
     "name": "Classical algorithm"
   },
     "model": {
-    "data": "datasets/credit_risk_data/train_2.pbz2 and datasets/credit_risk_data/test_2.pbz2",
+    "data": "datasets/credit_risk_data/load_credit_risk_data",
     "algorithm": "Recursive Feature Elimination - see Scikit-Learn",
     "ansatz": "None",
     "optimizer": "None"

@@ -5,8 +5,7 @@ Hence, the files in this directory are supposed to either load data from publicl
 online resources or to generate data themselves.
 
 ## Data Loading Files
-A data loading file is supposed to reference the online resource where the data is available and store the
-loaded train/test data--preferably in a pickle format. An example for loading credit risk data is given in 
+A data loading file is supposed to reference the online resource where the data is available. An example for loading credit risk data is given in 
 the [following file](credit_risk_data/load_credit_risk_data.py). 
 
 ## Data Generating Files

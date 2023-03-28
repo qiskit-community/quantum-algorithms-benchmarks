@@ -13,7 +13,7 @@
     "name": "Qiskit MPS Simulator"
   },
     "model": {
-    "data": "datasets/credit_risk_data/train.pbz2 and datasets/credit_risk_data/test.pbz2",
+    "data": "datasets/credit_risk_data/load_credit_risk_data",
     "algorithm": "Variational quantum classifier: qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/vqc.py ",
     "ansatz": "feature_map = ZZFeatureMap(feature_dimension=59, reps=2, entanglement='linear') \n ansatz = RealAmplitudes(num_qubits=59, reps=5, entanglement='linear')",
     "optimizer": "COBYLA(maxiter=100) from qiskit/algorithms/optimizers/COBYLA",
