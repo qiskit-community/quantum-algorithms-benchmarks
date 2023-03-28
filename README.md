@@ -2,11 +2,9 @@
 
 Welcome to the quantum algorithms benchmarks.
 This repository is made of three sub-modules each reflecting an area where quantum comuting has the potential to improve a computational task:
-- [Machine Learning](https://link_here),
-- [Optimization](https://github.com/qiskit-community/quantum-algorithms-benchmarks
-/blob/main/optimization/), and 
-- [Monte Carlo Simulation](https://github.com/qiskit-community/quantum-algorithms-benchmarks
-/blob/main/monte_carlo_simulation/algorithms/).
+- [Machine Learning](/machine_learning),
+- [Optimization](/optimization/), and 
+- [Monte Carlo Simulation](/monte_carlo_simulation/).
 
 ## Vision
 
@@ -21,8 +19,6 @@ Everybody is welcome to propose benchmark problems that they believe are relevan
 The proposed solutions to a benchmark problem may either be executed on simulators or hardware.
 The platform on which the solution was obtained and corresponding settings must be clearly indicated.
 Refer to the READMEs of the sub-modules for detailed instructions on how to contribute: 
-[Machine Learning](https://link_here), 
-[Optimization](https://github.com/qiskit-community/quantum-algorithms-benchmarks
-/blob/main/optimization/), and
-[Monte Carlo Simulation](https://github.com/qiskit-community/quantum-algorithms-benchmarks
-/blob/main/simulation/algorithms/).
+[Machine Learning](/machine_learning), 
+[Optimization](/optimization/), and
+[Monte Carlo Simulation](/simulation/algorithms/).
