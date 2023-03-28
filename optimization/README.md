@@ -3,15 +3,17 @@
 Welcome to the optimization benchmarks. 
 In this repository you will find a set of classical optimization problems and a description 
 of known solutions using quantum and/or classical hardware.
-This repository is organized according to the following structure:
+This repository is organized according to the following structure, where problems are organized following their type:
 
-- Optimization
-    - problems
-        - maxcut
-        - ...
-    - README.md
+- optimization/
+    - problems/
+        - maxcut/
+            - instance_1/
+                - solution_1
+                - ...
 
-The problems are thus organized following their type.
+Every problem should contain a clear description, and every solution needs to contain the defined metrics as well as sufficient information to be reproducible.
+
 
 ### Benchmarking metrics
 
@@ -27,8 +29,8 @@ This repository allows solutions to report at least one of the following metrics
 * **Time to solution** includes the time it took to execute the quantum algorithm. Any contributed
   solution that reports the time to solution should make clear what this includes. For instance,
   a benchmark with a solution obtained with a variational algorithm should specify if the time
-  to solution includes the training of the variational parameters or not. Some care must be taken
-  in reporting the time to solution since a family of problems may be solved by training the 
+  to solution includes the training of the variational parameters, queueing to run, etc. 
+  Some care must be taken in reporting the time to solution since a family of problems may be solved by training the 
   variational algorithm once and reusing the optimal parameters.
   
 * **Cost of solution** reports the ressources needed to obtain the solution. This may
@@ -54,7 +56,7 @@ operators it corresponds to.
 A short README.md should be included to explain the intent of the problem and why it makes a
 good benchmark.
 The benchmark problem may be generic in nature, e.g., solve a Maxcut problem of a given size
-and characteristics, or specific to a financial application.
+and characteristics, or specific to an application, e.g., in finance.
 For example, optimize a portfolio with a certain investment universe size under specified
 constraints.
 
@@ -70,12 +72,12 @@ The solution can include the following files:
   throughout the optimization.
 
 The notebook should provide enough information to reproduce the solution to the problem.
-It is acceptable to provide a minimal notebook linking to published and open access papers
+It is ok to provide a minimal notebook linking to published and open access papers
 that describe the solution to the optimization problem.
 Furthermore, the ``summary.json`` should clearly define the performance metrics that it 
 reports. 
 This file will be algorithmically parsed to report solutions at a high level in
-the summary notebook.
+the [summary notebook](link_tbd).
 The schemas in ``summary_template.json`` must therefore be strictly adhered to.
-If you are presenting a solutions to instances of a problem class make sure to include 
-these instances as LP files too.
+If you are presenting solutions to instances of a problem class make sure to include 
+these instances as LP files too or provide a link to where they can be found.
