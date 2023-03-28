@@ -14,7 +14,7 @@ In the following, we give an overview of these variants as well as some of their
 | [Modified Iterative AE](https://arxiv.org/abs/2208.14612)                                   | 2022 | TBD | Asymptotically optimal variant of IAE |
 | [Random Depth AE](https://arxiv.org/abs/2301.00528)                                         | 2023 | TBD |                                       |
 
-In the directory 'results' we provide benchmarking results for these algorithms for different scenarios.
+In the directory [results](/monte_carlo_simulation/algorithms/results/) we provide benchmarking results for these algorithms for different scenarios.
 For every algorithm, benchmarks are done according to the following setting:
 
 For every
