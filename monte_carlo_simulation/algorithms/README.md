@@ -9,7 +9,7 @@ In the following, we give an overview of these variants as well as some of their
 | Algorithm | Year | Benchmarked | Comments |
 |-----------|------|-------------|----------|
 | [Maximum Likelihood AE (MLAE)](https://link.springer.com/article/10.1007/s11128-019-2565-2) | 2020 | TBD |                                       |
-| [Iterative AE (IAE)](https://www.nature.com/articles/s41534-021-00379-1)                    | 2021 | TBD |                                       |
+| [Iterative AE (IAE)](https://www.nature.com/articles/s41534-021-00379-1)                    | 2021 | X   |                                       |
 | [Low Depth AE](https://quantum-journal.org/papers/q-2022-06-27-745/)                        | 2022 | TBD |                                       |
 | [Modified Iterative AE](https://arxiv.org/abs/2208.14612)                                   | 2022 | TBD | Asymptotically optimal variant of IAE |
 | [Random Depth AE](https://arxiv.org/abs/2301.00528)                                         | 2023 | TBD |                                       |
