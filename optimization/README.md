@@ -33,18 +33,19 @@ This repository allows solutions to report at least one of the following metrics
   Some care must be taken in reporting the time to solution since a family of problems may be solved by training the 
   variational algorithm once and reusing the optimal parameters.
   
-* **Cost of solution** reports the ressources needed to obtain the solution. This may
-  include, for instance, the price paid, the amount of energy consumed, or the type and number
+* **Computational Resources** reports the resources needed to obtain the solution. This may
+  include, for instance, the type of hardware used expressed as the type and number
   of CPUs and QPUs used to obtain the solution.
-  Benchmarks that report a cost of solution must clearly define what this cost includes and how
-  it is measured.
+  Benchmarks that report this metric must clearly define what it includes and how
+  it is measured. Note that computational resources accepts multiple entries to describe
+  complex hardware settings that, for instance, combine multiple computational units. 
 
 A proposed solution to a benchmark should clearly define what metric it is reporting and how it
 is defined. These benchmarks help evaluate the merit of different quantum approaches to 
 optimization problems. Indeed, good yet sub-optimal solutions may be acceptable compared to 
 optimal ones if they can be obtained quickly enough. In other cases, businesses may be driven 
 by the cost of obtaining solutions (either optimal or sub-optimal but good enough) which is
-why the *cost of solution* metric can be reported.
+why the *Computational Resources* metric can be reported.
 
 ### Contributing a new problem
 
@@ -69,7 +70,12 @@ The solution can include the following files:
   paper with more details, transpilation steps, algorithm details.
 * A ``summary.json`` file according to the ``summary_template.json`` template file found here.
 * A ``performance.csv`` file that tracks the performance of the optimization algorithm
-  throughout the optimization.
+  throughout the optimization. This cvs file should include the following columns:
+  `iteration number`, `best found solution`, `time`. Here, `iteration number` is the index of
+  the iteration of the solver. It can represent, e.g., the number of evaluations of the cost 
+  function or its gradient during the optimization. The `best found solution` is the value of
+  the best solution found up until the corresponding iteration. The `time` column represents
+  the time it took to arrive to the given point.
 
 The notebook should provide enough information to reproduce the solution to the problem.
 It is ok to provide a minimal notebook linking to published and open access papers
