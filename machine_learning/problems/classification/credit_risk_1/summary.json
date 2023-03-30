@@ -12,16 +12,20 @@
     "simulator": "True",
     "name": "Qiskit MPS Simulator"
   },
-    "model": {
+  "model": {
     "data": "datasets/credit_risk_data/load_credit_risk_data",
     "algorithm": "Variational quantum classifier: qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/vqc.py ",
     "ansatz": "feature_map = ZZFeatureMap(feature_dimension=59, reps=2, entanglement='linear') \n ansatz = RealAmplitudes(num_qubits=59, reps=5, entanglement='linear')",
     "optimizer": "COBYLA(maxiter=100) from qiskit/algorithms/optimizers/COBYLA",
     "loss": "Cross Entropy"
     },
-    "time to solution": {
+  "time to solution": {
     "value": "195.75",
     "unit": "hours",
     "description": "The above given time refers to the time it took to train the model according to the above given specifications and was measured using the time.time() functionality. "
+  },
+  "performance": {
+    "file": "performance.csv",
+    "description": "The performance is measured on training and test data with accuracy, recall and precision."
   }
 }

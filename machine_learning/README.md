@@ -45,6 +45,6 @@ Templates to summarize the models in *.json* and training parameters as well as 
 The presentation of an existing publication as a benchmark may be done in the form of a notebook as shown [in the following example](problems/feature_selection/credit_risk1/results.ipynb). 
 
 ## Ways to contribute
-* Contribute a new dataset
-* Contribute a new benchmarking problem
-* Contribute a new solution
+* Contribute a new dataset: Benchmarking strongly relies on the availability of suitable data. One way to contribute to this benchmarking repo is to either provide a script that loads publicly available data in a reproducible way or a script that directly generates a dataset. 
+* Contribute a new benchmarking problem: As soon as we have data, the next question is: What do we want to benchmark with it? Hence, another way to contribute is to propose a benchmarking problem.
+* Contribute a new solution: Finally, if you want to challenge existing benchmarking solutions, you can also contribute your own solution with your algorithmic setting of choice to the repo and document it according to the provided templates.

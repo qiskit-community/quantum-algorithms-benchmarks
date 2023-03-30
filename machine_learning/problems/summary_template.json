@@ -20,6 +20,10 @@
     "loss": "(str) Description of the loss function used to train the algorithm.",
     "metadata": "A free form dictionary to include additional metrics and information."
     },
+  "performance": {
+    "file": "(str) Path to directory with csv file.",
+    "description": "The performance is measured with respect to standard ML metrics on training and test data such as accuracy, recall and precision, and defined for each problem as appropriate."
+  },
   "time to solution": {
     "value": "(float) The time it took to find the solution.",
     "unit": "(str) The unit in which the time-to-solution is given. This should be 's' to indicate seconds or 'iter' to indicate the number iterations.",
@@ -28,16 +32,16 @@
     "optional": true
   },
   "cost of solution": {
-    "value": "A float which gives the cost of the solution.",
-    "unit": "A string of the unit in which the cost-of-solution is given.",
-    "description": "A description of how cost-of-solution is measured.",
+    "value": "(float) The cost of the solution.",
+    "unit": "(str) The unit in which the cost-of-solution is given.",
+    "description": "(str) A description of how cost-of-solution is measured.",
     "metadata": "A free form dictionary to include additional metrics and information.",
     "optional": true
   },
   "cost of inference": {
-    "value": "A float which gives the cost-of-inference.",
-    "unit": "A string of the unit in which the cost-of-inference is given.",
-    "description": "A description of how cost-of-inference is measured.",
+    "value": "(float) The cost of the inference.",
+    "unit": "(str) The unit in which the cost-of-inference is given.",
+    "description": "(str) A description of how cost-of-inference is measured.",
     "metadata": "A free form dictionary to include additional metrics and information.",
     "optional": true
   }

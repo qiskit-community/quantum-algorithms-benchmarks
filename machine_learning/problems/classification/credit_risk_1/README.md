@@ -1,0 +1,1 @@
+Credit risk problem - what do we do?
