@@ -18,7 +18,7 @@ In the directory [results](/monte_carlo_simulation/algorithms/results/) we provi
 For every algorithm, benchmarks are done according to the following setting:
 
 For every
-- exact value $a^* = 0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99$,
+- exact value $a^*^2 = 0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99$,
 - estimated/target accuracy (depending on the algorithm) $\epsilon = 10^{-k}, k = 1, \ldots, 6$, and
 - confidence level $1-\alpha = 0.95$,
 
