@@ -1,2 +1,2 @@
-algorithm,config,a_target,alpha,a_estimate,exact_error,ci_width,num_oracle_calls
+algorithm,config,p_target,alpha,p_estimate,exact_error,ci_width,num_oracle_calls
 IAE,"{'epsilon_target': 1e-1, 'alpha': 0.05, 'shots': 100}",0.25,0.05,0.275,0.025,0.05,200
