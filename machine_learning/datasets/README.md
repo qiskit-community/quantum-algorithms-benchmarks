@@ -12,9 +12,3 @@ the [following file](credit_risk_data/load_credit_risk_data.py).
 A data generating file is supposed to implement a well documented script that generates a dataset. 
 Additionally, the data generating script should be executed and the resulting train/test data should be 
 stored--preferably in a pickle format.
-
-## Suggestions
-- Link and load relevant [Kaggle](https://www.kaggle.com/) datasets
-- Generate a GARCH dataset
-- Link and load the data from publications such as [Benchmark Dataset for Mid-Price Forecasting of Limit
-Order Book Data with Machine Learning Methods](https://arxiv.org/pdf/1705.03233.pdf)
