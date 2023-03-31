@@ -7,11 +7,6 @@
     "title": "(str) A title of any publication that may be associated to the solution.",
     "optional": true
   },
-  "hardware": {
-    "maximum number of qubits": "(int) The maximum number of qubits used in a single quantum circuit.",
-    "simulator": "(bool) Weather hardware or a simulator.",
-    "name": "Name of the hardware that run the computation."
-  },
   "objective": {
     "value": "(float or int) The value of the objective function that the solution achieved.",
     "unit": "(str) The unit in which the quality is measured.",
@@ -33,11 +28,13 @@
     "metadata": "A free form dictionary to include additional metrics and information.",
     "optional": true
   },
-  "cost of solution": {
-    "value": "A float which gives the cost of the solution.",
-    "unit": "A string of the unit in which the cost-of-solution is given.",
-    "description": "A description of how cost-of-solution is measured.",
-    "metadata": "A free form dictionary to include additional metrics and information.",
-    "optional": true
-  }
+  "computational resources": [
+    {
+      "value": "A float which gives the value of the computation resource reported.",
+      "unit": "A string of the unit in which the cost-of-solution is given.",
+      "description": "A description of how cost-of-solution is measured.",
+      "metadata": "A free form dictionary to include additional metrics and information.",
+      "optional": true
+    }
+  ]
 }

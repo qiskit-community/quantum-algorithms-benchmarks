@@ -1,4 +1,4 @@
-# Benchmarking Amplitude Estimation Algorithms
+# Benchmarking Amlitude Estimation Algorithms
 
 Amplitude Estimation (AE) has been first introduced by Brassard et al. (refered to here as "[Canonical AE](https://arxiv.org/abs/quant-ph/0005055)").
 AE is an algorithm that may allow to speed-up many applications, such as derivative pricing or risk analysis.
@@ -9,16 +9,16 @@ In the following, we give an overview of these variants as well as some of their
 | Algorithm | Year | Benchmarked | Comments |
 |-----------|------|-------------|----------|
 | [Maximum Likelihood AE (MLAE)](https://link.springer.com/article/10.1007/s11128-019-2565-2) | 2020 | TBD |                                       |
-| [Iterative AE (IAE)](https://www.nature.com/articles/s41534-021-00379-1)                    | 2021 | TBD |                                       |
+| [Iterative AE (IAE)](https://www.nature.com/articles/s41534-021-00379-1)                    | 2021 | X   |                                       |
 | [Low Depth AE](https://quantum-journal.org/papers/q-2022-06-27-745/)                        | 2022 | TBD |                                       |
 | [Modified Iterative AE](https://arxiv.org/abs/2208.14612)                                   | 2022 | TBD | Asymptotically optimal variant of IAE |
 | [Random Depth AE](https://arxiv.org/abs/2301.00528)                                         | 2023 | TBD |                                       |
 
-In the directory 'results' we provide benchmarking results for these algorithms for different scenarios.
+In the directory [results](/monte_carlo_simulation/algorithms/results/) we provide benchmarking results for these algorithms for different scenarios.
 For every algorithm, benchmarks are done according to the following setting:
 
 For every
-- exact value $a^* = 0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99$,
+- exact value $a^*^2 = 0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99$,
 - estimated/target accuracy (depending on the algorithm) $\epsilon = 10^{-k}, k = 1, \ldots, 6$, and
 - confidence level $1-\alpha = 0.95$,
 
