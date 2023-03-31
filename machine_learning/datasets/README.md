@@ -5,10 +5,17 @@ Hence, the files in this directory are supposed to either load data from publicl
 online resources or to generate data themselves.
 
 ## Data Loading Files
-A data loading file is supposed to reference the online resource where the data is available. An example for loading credit risk data is given in 
-the [following file](credit_risk_data/load_credit_risk_data.py). 
+A data loading file is supposed to reference the online resource where the data is available. 
+An example for loading credit risk data is given in the [following file](credit_risk_data/load_credit_risk_data.py). 
 
 ## Data Generating Files
 A data generating file is supposed to implement a well documented script that generates a dataset. 
 Additionally, the data generating script should be executed and the resulting train/test data should be 
 stored--preferably in a pickle format.
+
+## List of Available Datasets
+
+| Description      | Folder                               | Loaded/Generated | Number Data Samples | Data Dimension |
+|------------------|--------------------------------------|------------------|---------------------|----------------|
+| Credit Risk Data | [credit_risk_data](credit_risk_data) | Loaded           | 1000                | 59             |
+

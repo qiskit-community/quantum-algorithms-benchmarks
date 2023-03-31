@@ -1,20 +1,31 @@
 import sys
 
 import pandas as pd
+from pandas import DataFrame
 from io import StringIO
-import _pickle as cPickle
 import numpy as np
 
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.model_selection import train_test_split
 
 
-def data_generation(seed=77):
-    ###
-    # Function to generate a credit risk train/test data split from
-    # http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data
-    # and store a train/test data split.
-    ###
+def data_generation(seed: int = 77,
+                    train_indices_dir: str = 'train_indices.npy',
+                    test_indices_dir: str = 'test_indices.npy',
+                    test_size: float = 0.3,
+                    ):
+    """
+    Function to generate a credit risk train/test data split from
+    http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data
+    and store a train/test data split in the form of an index array
+
+    Args:
+        seed: Random seed.
+        train_indices_dir: Directory to file where training index array should be stored.
+        test_indices_dir: Directory to file where test index array should be stored.
+        test_size: Fraction of all data which is to be used for the test data.
+    """
+
     if sys.version_info[0] == 3:
         from urllib.request import urlopen
     else:
@@ -23,8 +34,8 @@ def data_generation(seed=77):
                  "german/german.data") as url:
         byte_data = url.read()
 
-    str_data = StringIO(str(byte_data,'utf-8'))
-
+    str_data = StringIO(str(byte_data, 'utf-8'))
+    # Load data headers
     columns = ['Existing_CheckingAccount_Status',
             'Duration_In_Month',
               'Credit_History',
@@ -46,7 +57,7 @@ def data_generation(seed=77):
               'Telephone_Registration_Status',
               'Foreign_Worker',
               'Credit_Risk_Status']
-
+    # Load data frame
     df = pd.read_csv(str_data,
                      sep=" ",
                      header=None,
@@ -84,19 +95,28 @@ def data_generation(seed=77):
                                         "Number_Existing_Credits_At_Bank_zscl",
                                         "Number_People_Liable_Maintenance_zscl"])
     concatenated_X = pd.concat([categorical_X, numerical_X], axis=1)
+    # Concatenate labels and data
     X_Y = pd.concat([concatenated_X, y], axis=1)
-    train, test = train_test_split(X_Y, test_size=0.3, stratify=X_Y['is_credit_risky'],
+    # Generate train/test split
+    train, test = train_test_split(X_Y, test_size=test_size, stratify=X_Y['is_credit_risky'],
                                    random_state=seed)
-    np.save('train_indices.npy', np.array(train.index))
-    np.save('test_indices.npy', np.array(test.index))
+    # Load indices which refer to train respectively test data
+    np.save(train_indices_dir, np.array(train.index))
+    np.save(test_indices_dir, np.array(test.index))
     return
 
 
-def data_loading():
-    ###
-    # Function to load a pre-generated credit risk train/test data split from
-    # http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data.
-    ###
+def data_loading(train_indices_dir: str = 'train_indices.npy',
+                 test_indices_dir: str = 'test_indices.npy') -> DataFrame:
+    """
+    Function to load a pre-generated credit risk train/test data split--see test_indices.npy and train_indices.npy--
+    from http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data and
+    returns the train respectively test data as a pandas DataFrame
+
+    Args:
+        train_indices_dir: Directory to file where training index array is stored.
+        test_indices_dir: Directory to file where test index array is stored.
+    """
     if sys.version_info[0] == 3:
         from urllib.request import urlopen
     else:
@@ -105,10 +125,10 @@ def data_loading():
                  "german/german.data") as url:
         byte_data = url.read()
 
-    str_data = StringIO(str(byte_data,'utf-8'))
-
+    str_data = StringIO(str(byte_data, 'utf-8'))
+    # Load data headers
     columns = ['Existing_CheckingAccount_Status',
-            'Duration_In_Month',
+              'Duration_In_Month',
               'Credit_History',
               'Loan_Purpose',
               'Credit_Amount',
@@ -128,7 +148,7 @@ def data_loading():
               'Telephone_Registration_Status',
               'Foreign_Worker',
               'Credit_Risk_Status']
-
+    # Load data frame
     df = pd.read_csv(str_data,
                      sep=" ",
                      header=None,
@@ -166,9 +186,12 @@ def data_loading():
                                         "Number_Existing_Credits_At_Bank_zscl",
                                         "Number_People_Liable_Maintenance_zscl"])
     concatenated_X = pd.concat([categorical_X, numerical_X], axis=1)
+    # Concatenate labels and data
     X_Y = pd.concat([concatenated_X, y], axis=1)
-    train_indices = np.load('train_indices.npy')
-    test_indices = np.load('test_indices.npy')
+    # Load indices which refer to train respectively test data
+    train_indices = np.load(train_indices_dir)
+    test_indices = np.load(test_indices_dir)
+    # Generate train respectively test data from indices
     train = X_Y.iloc[train_indices]
     test = X_Y.iloc[test_indices]
     return train, test

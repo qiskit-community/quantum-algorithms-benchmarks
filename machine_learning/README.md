@@ -1,6 +1,9 @@
 # Benchmarking quantum machine learning for finance
 
-This subdirectory holds the machine learning track of the benchmarks of quantum computing algorithms.
+This subdirectory holds the machine learning track of the benchmarks of quantum computing algorithms. <br>
+Quantum machine learning generally refers to the exploration of synergies between quantum computing and machine learning. 
+The workflow typically involves the processing of given training data with an interplay of a classical and a quantum computer.
+
 
 ## Problem definitions
 
