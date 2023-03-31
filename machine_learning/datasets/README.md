@@ -15,7 +15,7 @@ stored--preferably in a pickle format.
 
 ## List of Available Datasets
 
-| Description      | Folder                               | Loaded/Generated | Number Data Samples | Data Dimension |
+| Description      | Directory                            | Loaded/Generated | Number Data Samples | Data Dimension |
 |------------------|--------------------------------------|------------------|---------------------|----------------|
 | Credit Risk Data | [credit_risk_data](credit_risk_data) | Loaded           | 1000                | 59             |
 
