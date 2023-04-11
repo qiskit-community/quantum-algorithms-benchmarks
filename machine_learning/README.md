@@ -1,4 +1,4 @@
-# Benchmarking quantum machine learning for finance
+# Benchmarking quantum machine learning
 
 This subdirectory holds the machine learning track of the benchmarks of quantum computing algorithms.
 
@@ -27,7 +27,7 @@ For each of the above mentioned algorithms this repository provides the tools to
 * **Performance** is measured with respect to standard ML metrics on training and test data such as accuracy, recall and precision, and defined for each problem as appropriate.
 
 * **Resource requirements** is measured considering various aspects: the training time, the inference time of a model, and the amount of data required to train a model up to a pre-defined accuracy.
-  For the temporal metrics, it should be noted that this includes the classical pre-processing time it takes to prepares the quantum circuits as well as the execution of the quantum circuits - except for queuing time.
+  Temporal metrics should include the classical pre-processing time it takes to prepares the quantum circuits as well as the execution time of the quantum circuits. Queuing time should not be included.
   
 * **Intrinsic model properties** This class of metrics includes generalization bounds and capacity measures.
 
