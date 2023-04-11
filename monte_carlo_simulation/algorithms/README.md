@@ -17,24 +17,25 @@ In the following, we give an overview of these variants as well as some of their
 
 In the directory [results](/monte_carlo_simulation/algorithms/results/) we provide benchmarking results for these algorithms for different scenarios.
 
-The objective of amplitude estimation is as follows. For an unknown amplitude $a_\text{target} \in [0,1]$, there is a quantum subroutine that for any $k \in 0,1,2,...$ samples from Bernoulli random variable with parameter $\sin^2( (2k+1) \theta_\text{target}  )$ where $\theta_\text{target} = \arcsin(a_\text{target})$. Running this subroutine requires $k$ oracle calls. The objective is to estimate the probability $p_\text{target} := a^2_\text{target}$ using as few oracle calls as possible.
+The objective of amplitude estimation is as follows. For an unknown amplitude $a_\text{target} \in [0,1]$, there is a quantum subroutine that for any $k \in \{0,1,2,...\}$ samples from Bernoulli random variable with parameter $\sin^2( (2k+1) \theta_\text{target}  )$ where $\theta_\text{target} = \arcsin(a_\text{target})$. Running this subroutine requires $k$ oracle calls. The objective is to estimate the probability $p_\text{target} := a^2_\text{target}$ using as few oracle calls as possible.
 
-For every algorithm, 100 data points are to be collected for all combinations of the following parameters:
+For every algorithm, 1000 data points are to be collected for all combinations of the following parameters:
 - target probability $p_\text{target} = 0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99$,
-- the desired accuracy $\epsilon = 10^{-k},$ where $ k = 1, \ldots, 6$, and
+- the desired accuracy $\epsilon = 10^{-k},$ where $ k = 1, ..., 6$, and
 - confidence level $1-\alpha = 0.95$,
 
 The desired accuracy should inform the half-width of the a posteriori confidence intervals (for confidence level $1-\alpha$), but algorithms are not penalized for overshooting the desired accuracy. Further, the actually achieved accuracy is reported. The corresponding algorithmic parameters to achieve the results should be given in a JSON dictionary in the column `config`.
 The raw results are reported in the format (cf. [results/results_template.csv](results/results_template.csv)):
 
 
-| algorithm | config | p_target | alpha | p_estimate | exact_error | ci_width    | num_oracle_calls |
-|-----------|--------|----------|-------|------------|-------------|-------------|------------------|
-| IAE       | {...}  | 0.25     | 0.05  | 0.28       | 0.03        | 0.12        | 100              |
+| algorithm | config | epsilon | p_target | alpha | p_estimate | exact_error | ci_width    | num_oracle_calls |
+|-----------|--------|---------|----------|-------|------------|-------------|-------------|------------------|
+| IAE       | {...}  | 0.001   | 0.25     | 0.05  | 0.28       | 0.03        | 0.12        | 100              |
 
 The columns are defined as follows:
 - `algorithm`: The name or abbreviation of the considered algorithm.
 - `config`: A dictionary summarizing the algorithm settings for reproducability.
+- `epsilon`: The desired accuracy of the estimate. The final confidence interval may be smaller. 
 - `p_target`: The true $p_\text{target}$ value of the considered problem.
 - `alpha`: $(1-\alpha)$ determines the confidence level of the a posterori confidence intervals.
 - `p_estimate`: The estimate of $p_\text{target}$ returned by the algorithm.
