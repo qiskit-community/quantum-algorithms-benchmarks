@@ -17,7 +17,7 @@ In the following, we give an overview of these variants as well as some of their
 
 In the directory [results](/monte_carlo_simulation/algorithms/results/) we provide benchmarking results for these algorithms for different scenarios.
 
-The objective of amplitude estimation is as follows. For an unknown amplitude $a_\text{target} \in [0,1]$, there is a quantum subroutine that for any $k \in \{0,1,2,...\}$ samples from Bernoulli random variable with parameter $\sin^2( (2k+1) \theta_\text{target}  )$ where $\theta_\text{target} = \arcsin(a_\text{target})$. Running this subroutine requires $k$ oracle calls. The objective is to estimate the probability $p_\text{target} := a^2_\text{target}$ using as few oracle calls as possible.
+The objective of amplitude estimation is as follows. For an unknown amplitude $a_\text{target} \in [0,1]$, there is a quantum subroutine that for any $k = 0,1,2,...$ samples from Bernoulli random variable with parameter $\sin^2( (2k+1) \theta_\text{target}  )$ where $\theta_\text{target} = \arcsin(a_\text{target})$. Running this subroutine requires $k$ oracle calls. The objective is to estimate the probability $p_\text{target} := a^2_\text{target}$ using as few oracle calls as possible.
 
 For every algorithm, 1000 data points are to be collected for all combinations of the following parameters:
 - target probability $p_\text{target} = 0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99$,
