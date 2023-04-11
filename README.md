@@ -1,4 +1,4 @@
-# Quantum Algorithms Benchmarks
+# Quantum Algorithms Benchmarks [WIP]
 
 Welcome to the quantum algorithms benchmarks.
 This repository is made of three sub-modules each reflecting an area where quantum comuting has the potential to improve a computational task:
