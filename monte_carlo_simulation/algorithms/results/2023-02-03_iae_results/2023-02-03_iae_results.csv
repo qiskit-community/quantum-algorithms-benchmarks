@@ -1,4 +1,4 @@
-algorithm,config,a_target,alpha,a_estimate,exact_error,ci_width,num_oracle_calls
+algorithm,config,p_target,alpha,p_estimate,exact_error,ci_width,num_oracle_calls
 IAE,"{'epsilon_target': 0.1, 'alpha': 0.05,  'shots': 100}",0.01,0.05,0.011685781081200509,0.001685781081200509,0.005204246204401542,200
 IAE,"{'epsilon_target': 0.1, 'alpha': 0.05,  'shots': 100}",0.01,0.05,0.008910666410254092,0.001089333589745908,0.004525146335811875,200
 IAE,"{'epsilon_target': 0.1, 'alpha': 0.05,  'shots': 100}",0.01,0.05,0.008784243864504241,0.0012157561354957588,0.0032452640914093812,300
