@@ -7,15 +7,19 @@ The workflow typically involves the processing of given training data with an in
 
 ## Problem definitions
 
-To benchmark quantum algorithms for [machine learning problems](problems), we consider a variety of benchmarks.
-The benchmarks include
+Since this repository is intended to benchmark quantum machine learning algorithms on well defined problems we aim to 
+(i) compare quantum methods against each other, and 
+(ii) compare quantum methods against state-of-the-art classical methods.
+This requires a variety of *well defined* [machine learning problems](problems) on which to run the algorithms.
+So far, these problems include
 
 * Classification such as fraud detection or customer analysis
 * Forecasting
 * Feature selection
 * etc.
 
-The benchmarks are based on the following quantum algorithms
+Next, both the quantum and classical approaches to solve the problems must also be carefully specified.
+For instance, the following quantum methods may be used to solve the problems outlined in this repository.
 
 * [Variational quantum classifier (VQC)](https://github.com/Qiskit/qiskit-machine-learning/blob/main/qiskit_machine_learning/algorithms/classifiers/vqc.py) 
 * [Quantum support vector machine classifier (QSVC)](https://github.com/Qiskit/qiskit-machine-learning/blob/main/qiskit_machine_learning/algorithms/classifiers/qsvc.py)
@@ -48,6 +52,6 @@ Templates to summarize the models in *.json* and training parameters as well as 
 The presentation of an existing publication as a benchmark may be done in the form of a notebook as shown [in the following example](problems/feature_selection/credit_risk1/results.ipynb). 
 
 ## Ways to contribute
-* **Contribute a new dataset:** Benchmarking strongly relies on the availability of suitable data. One way to contribute to this benchmarking repository is to either provide a script that loads publicly available data in a reproducible way or a script that directly generates a dataset. 
+* **Contribute a new dataset:** Benchmarking strongly relies on the availability of suitable data. One way to contribute to this benchmarking repository is to either provide a script that loads publicly available data in a reproducible way or a script that directly generates a dataset. When contributing a new data set it should be made clear how this dataset fits into the benchmarking framework. 
 * **Contribute a new benchmarking problem:** As soon as we have data, the next question is: What do we want to benchmark with it? Hence, another way to contribute is to propose a benchmarking problem with a suitable description.
-* **Contribute a new solution:** Finally, if you want to challenge existing benchmarking solutions, you can also contribute your own solution with your algorithmic setting of choice to the repo and document it according to the provided templates.
+* **Contribute a new solution:** Finally, if you want to challenge any of the existing benchmarking solutions you can contribute your own solution to this repository. The solution must be documented according to the provided templates.
