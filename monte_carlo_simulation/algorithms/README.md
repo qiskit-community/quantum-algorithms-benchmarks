@@ -21,7 +21,7 @@ The objective of amplitude estimation is as follows. For an unknown amplitude $a
 
 For every algorithm, 1000 data points are to be collected for all combinations of the following parameters:
 - target probability $p_\text{target} = 0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99$,
-- the desired accuracy $\epsilon = 10^{-k},$ where $ k = 1, ..., 6$, and
+- the desired accuracy $\epsilon = 10^{-k},$ where $k = 1, ..., 6$, and
 - confidence level $1-\alpha = 0.95$,
 
 The desired accuracy should inform the half-width of the a posteriori confidence intervals (for confidence level $1-\alpha$), but algorithms are not penalized for overshooting the desired accuracy. Further, the actually achieved accuracy is reported. The corresponding algorithmic parameters to achieve the results should be given in a JSON dictionary in the column `config`.
