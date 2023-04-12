@@ -1,4 +1,4 @@
-# Quantum Algorithms Benchmarks ($\color{red}\text{work in progress}$)
+# Quantum Algorithms Benchmarks ($\color{red}{work \ in \ progress}$)
 
 Welcome to the quantum algorithms benchmarks.
 This repository is made of three sub-modules each reflecting an area where quantum comuting has the potential to improve a computational task:
