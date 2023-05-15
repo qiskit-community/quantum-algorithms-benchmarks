@@ -31,12 +31,12 @@ For instance, the following quantum methods may be used to solve the problems ou
 
 For each of the above mentioned algorithms this repository provides the tools to benchmark these problems with respect to the following metrics.
 
-* **Performance** is measured with respect to standard ML metrics on training and test data such as accuracy, recall and precision, and defined for each problem as appropriate.
+* **Performance** are measured with respect to standard ML metrics on training and test data such as accuracy, recall and precision, and defined for each problem as appropriate.
 
-* **Resource requirements** is measured considering various aspects: the training time, the inference time of a model, and the amount of data required to train a model up to a pre-defined accuracy.
+* **Resource requirements** are measured considering various aspects: the training time, the inference time of a model, and the amount of data required to train a model up to a pre-defined accuracy.
   Temporal metrics should include the classical pre-processing time it takes to prepares the quantum circuits as well as the execution time of the quantum circuits. Queuing time should not be included.
   
-* **Intrinsic model properties** This class of metrics includes generalization bounds and capacity measures.
+* **Intrinsic model properties** include generalization bounds and capacity measures.
 
 ## Datasets
 
