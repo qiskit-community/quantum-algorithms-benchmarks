@@ -7,3 +7,8 @@ The data set includes $1000$ data points which determine the credit-worthiness o
 Notably, the categorical features of the original data set are one-hot encoded. 
 Thus, the dimension of the final feature vector grows to $59$.
 This fact allows us to directly conclude that the individual features are not linearly independent.
+
+Files:
+- [Data Loading File](load_credit_risk_data.py)
+- [Train Data Indices for Pre-Loaded Data Split](train_indices.npy)
+- [Test Data Indices for Pre-Loaded Data Split](test_indices.npy)
