@@ -1,0 +1,29 @@
+{
+  "date": {
+    "value": "2023-10-05"
+  },
+  "objective": {
+    "value": 130,
+    "unit": "",
+    "description": "The objective value of the selected knapsack items."
+  },
+  "approximation ratio": {
+    "value": 1.0,
+    "description": "The depth-one QAOA found the optimal solution and the approximation ratio is 1."
+  },
+  "time to solution": {
+    "value": 2094.261,
+    "unit": "s",
+    "description": "Time-to-solution is reported as the Qiskit Runtime usage and includes the full variational optimization. Qiskit Runtime usage is the time a job spends leveraging the Qiskit Runtime architecture. It includes quantum compute and near-time classical pre- and post-processing. Queue time is not included."
+  },
+    "computational resources": [
+    {
+      "value": 127,
+      "description": "The number of qubits used on the quantum processor to perform the optimization.",
+      "metadata": {
+        "simulator": false,
+        "processor name": "ibm_nazca"
+      }
+    }
+  ]
+}
