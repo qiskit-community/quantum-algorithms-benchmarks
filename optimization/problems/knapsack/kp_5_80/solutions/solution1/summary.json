@@ -18,7 +18,7 @@
   },
     "computational resources": [
     {
-      "value": 127,
+      "value": 12,
       "description": "The number of qubits used on the quantum processor to perform the optimization.",
       "metadata": {
         "simulator": false,
