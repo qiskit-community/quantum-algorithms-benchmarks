@@ -1,0 +1,1 @@
+Using QAOA with Sampler the optimal solution is retrieved.
